@@ -56,7 +56,7 @@ while not asynch:
     if status == "ABORTED":
         print "Subrelease %s aborted in XLR" % (release_id)
         sys.exit(1)
-    time.sleep(5)
+    time.sleep(statusCheckInterval)
 
 if gateTaskTitle:
     tasks = taskApi.searchTasksByTitle(gateTaskTitle, None, getCurrentRelease().id)
